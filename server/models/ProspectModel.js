@@ -8,8 +8,8 @@ const prospectsSchema = new Schema({
 	email: 		String,
 	date: 		Date,
 	timeFrame:	String,
-	poolId: 	null,
-	spaId: 		null,
+	poolId: 	String,
+	spaId: 		String,
 	rating: 	[]
 });
 

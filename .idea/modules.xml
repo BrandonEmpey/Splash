@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Splash.iml" filepath="$PROJECT_DIR$/.idea/Splash.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/TropicalTemp.iml" filepath="$PROJECT_DIR$/.idea/TropicalTemp.iml" />
     </modules>
   </component>

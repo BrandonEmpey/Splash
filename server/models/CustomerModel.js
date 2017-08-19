@@ -7,8 +7,8 @@ const customerSchema = new Schema({
 	phone:   String,
 	email: String,
 	date: Date,
-	poolId: null,
-	spaId: null,
+	poolId: String,
+	spaId: String,
 	rating: []
 });
 
