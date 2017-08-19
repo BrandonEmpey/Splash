@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fa595ba9-d8f0-434c-a828-c4dadcf382a2" name="Default" comment="Initial Commit.&#10;&#10;- Express Model Schemas Created.&#10;- Express Routes created.&#10;- MongoDB input functions begun.">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/Ripple.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/runConfigurations/bin_www.xml" afterPath="$PROJECT_DIR$/.idea/runConfigurations/bin_www.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/bin/www" afterPath="$PROJECT_DIR$/server/bin/www" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/models/CustomerModel.js" afterPath="$PROJECT_DIR$/server/models/CustomerModel.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/models/ProspectModel.js" afterPath="$PROJECT_DIR$/server/models/ProspectModel.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -26,8 +19,8 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="141">
-              <caret line="20" column="56" lean-forward="true" selection-start-line="20" selection-start-column="56" selection-end-line="20" selection-end-column="56" />
+            <state relative-caret-position="451">
+              <caret line="38" column="59" lean-forward="true" selection-start-line="38" selection-start-column="59" selection-end-line="38" selection-end-column="59" />
               <folding />
             </state>
           </provider>
@@ -199,6 +192,36 @@
               <item name="Ripple" type="b2602c69:ProjectViewProjectNode" />
               <item name="Splash" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Ripple" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Splash" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Ripple" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Splash" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Ripple" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Splash" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Ripple" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Splash" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="router" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Ripple" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Splash" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -261,12 +284,12 @@
       <workItem from="1503152446134" duration="25000" />
       <workItem from="1503152528760" duration="21000" />
       <workItem from="1503152625805" duration="17000" />
-      <workItem from="1503152784606" duration="334000" />
+      <workItem from="1503152784606" duration="1121000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29626000" />
+    <option name="totallyTimeSpent" value="30413000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="39" y="23" width="1607" height="970" extended-state="0" />
@@ -674,8 +697,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/server/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="20" column="56" lean-forward="true" selection-start-line="20" selection-start-column="56" selection-end-line="20" selection-end-column="56" />
+        <state relative-caret-position="451">
+          <caret line="38" column="59" lean-forward="true" selection-start-line="38" selection-start-column="59" selection-end-line="38" selection-end-column="59" />
           <folding />
         </state>
       </provider>
