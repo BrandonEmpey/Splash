@@ -17,11 +17,11 @@ prospectRouter.route('/customers')
 		if(req.query.name){
 			query.name = req.query.name;
 		}
-		Prospect.find(query, function(err, books){
+		Prospect.find(query, function(err, prospects){
 			if (err)
 				res.status(500).send(err);
 			else
-				res.json(books);
+				res.json(prospects);
 		});
 		return prospectRouter;
 	});

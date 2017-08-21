@@ -2,7 +2,7 @@
   <div class="form">
     <form>
       <fieldset>
-        <legend>Pool Input</legend>
+        <legend>Customer Input</legend>
         Name:<br>
         <input type="text" name="name"><br>
         Width:<br>
@@ -31,23 +31,8 @@
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style lang="stylus">
-  form{
-    width: 33vw;
-    display: flex;
-    justify-content: center;
-  }
+<style>
 
-    .form{
-      width: 33vw;
-      display: flex;
-    }
 
-  .dbWindow{
-    border: 1px black solid;
-    width: 33vw;
-    height: 25vh;
-    justify-content center;
-    display: flex;
-  }
+
 </style>

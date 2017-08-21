@@ -17,7 +17,7 @@ const poolSchema = new Schema({
 		turboTwister:	false,
 		slidePrep:		false,
 		waterFeature:	false,
-		ledLight:		false,
+		ledLight:		Number,
 		autoVac:		false,
 		stepSaver:		false,
 		autoCover:		false,

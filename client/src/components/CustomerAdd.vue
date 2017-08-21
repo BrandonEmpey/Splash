@@ -31,18 +31,6 @@
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style lang="stylus">
-  form{
-    width: 33vw;
-    display: flex;
-    justify-content: center;
-  }
+<style>
 
-  .dbWindow{
-    border: 1px black solid;
-    width: 33vw;
-    height: 25vh;
-    justify-content center;
-    display: flex;
-  }
 </style>

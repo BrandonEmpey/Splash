@@ -1,10 +1,19 @@
+
 const express = require('express');
 const router = express.Router();
 const bodyParser = require('body-parser');
+const poolRouter = express.Router();
+const Pool = require('../models/poolModel');
 
-	const poolRouter = express.Router();
 
-	poolRouter.route('/pools')
+
+// router.get('/', function(req, res) {
+// 	res.json({ message: 'hooray! welcome to our api!' });
+// });
+
+
+
+	poolRouter.route('/')
 		.post(function (req, res)
 		{
 			const pool = new Pool(req.body);
@@ -16,17 +25,16 @@ const bodyParser = require('body-parser');
 			if(req.query.name){
 				query.name = req.query.name;
 			}
-			Pool.find(query, function(err, books){
-				if (err)
-					res.status(500).send(err);
-				else
-					res.json(books);
+
+			Pool.find().then(pools => {
+				console.log(pools);
+				res.json(pools);
 			});
-			return poolRouter;
 		});
 
 
-	module.exports = poolRouter;
+
+module.exports = poolRouter;
 
 
 

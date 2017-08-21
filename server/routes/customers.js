@@ -16,11 +16,11 @@ customerRouter.route('/customers')
 		if(req.query.name){
 			query.name = req.query.name;
 		}
-		Customer.find(query, function(err, books){
+		Customer.find(query, function(err, customers){
 			if (err)
 				res.status(500).send(err);
 			else
-				res.json(books);
+				res.json(customers);
 		});
 		return customerRouter;
 	});

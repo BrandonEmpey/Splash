@@ -16,11 +16,11 @@ spaRouter.route('/spas')
 		if(req.query.name){
 			query.name = req.query.name;
 		}
-		Spa.find(query, function(err, books){
+		Spa.find(query, function(err, spas){
 			if (err)
 				res.status(500).send(err);
 			else
-				res.json(books);
+				res.json(spas);
 		});
 		return spaRouter;
 	});

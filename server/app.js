@@ -9,9 +9,10 @@ const mongoose = require('mongoose');
 const env = require('dotenv').config();
 const index = require('./routes/index');
 const users = require('./routes/users');
+const pools = require('./routes/pools');
 
 const app = express();
-const db = mongoose.connect('mongodb://localhost/tropical');
+const db = mongoose.connect('mongodb://localhost/Tropical');
 
 const Customer = require('./models/customerModel');
 const Pool = require('./models/poolModel');
@@ -46,9 +47,10 @@ app.use('/api/spas', spaRouter);
 app.use('/api/customers', customerRouter);
 app.use('/api/prospects', prospectRouter);
 
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
-  const err = new Error('Not Found');
+  const err = new Error('HA!');
   err.status = 404;
   next(err);
 });
