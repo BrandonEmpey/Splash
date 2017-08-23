@@ -19,10 +19,10 @@ app.use(cors({
 }));
 const db = mongoose.connect(process.env.MONGODB_URI, {useMongoClient: true});
 
-const Customer = require('./models/customerModel');
-const Pool = require('./models/poolModel');
+const Customer = require('./models/CustomerModel');
+const Pool = require('./models/PoolModel');
 const Prospect = require('./models/prospectModel');
-const Spa = require('./models/spaModel');
+const Spa = require('./models/SpaModel');
 
 // const poolModel = mongoose.model('Pool', poolSchema);
 

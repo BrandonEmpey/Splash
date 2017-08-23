@@ -3,7 +3,7 @@ const express = require('express');
 const router = express.Router();
 const bodyParser = require('body-parser');
 const poolRouter = express.Router();
-const Pool = require('../models/poolModel');
+const Pool = require('../models/PoolModel');
 
 
 
