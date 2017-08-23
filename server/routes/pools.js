@@ -12,26 +12,31 @@ const Pool = require('../models/poolModel');
 // });
 
 
-
+function pool ()
+{
+	
+}
 	poolRouter.route('/')
 		.post(function (req, res)
 		{
 			const pool = new Pool(req.body);
 			pool.save();
 		})
-		.get(function (req, res){
+		.get(function (req, res)
+		{
 			let query = {};
 
-			if(req.query.name){
+			if (req.query.name)
+			{
 				query.name = req.query.name;
 			}
 
-			Pool.find().then(pools => {
+			Pool.find().then(pools =>
+			{
 				console.log(pools);
 				res.json(pools);
 			});
 		});
-
 
 
 module.exports = poolRouter;

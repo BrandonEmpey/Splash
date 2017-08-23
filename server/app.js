@@ -10,6 +10,7 @@ const env = require('dotenv').config();
 const index = require('./routes/index');
 const users = require('./routes/users');
 const pools = require('./routes/pools');
+const customerLogin = require('./routes/customerLogin');
 
 const app = express();
 const db = mongoose.connect('mongodb://localhost/Tropical');
@@ -22,6 +23,7 @@ const Spa = require('./models/spaModel');
 // const poolModel = mongoose.model('Pool', poolSchema);
 
 const customerRouter = require('./routes/customers');
+const customerLoginRouter = require('./routes/customerLogin');
 const poolRouter = require('./routes/pools');
 const prospectRouter = require('./routes/prospects');
 const spaRouter = require('./routes/spas');

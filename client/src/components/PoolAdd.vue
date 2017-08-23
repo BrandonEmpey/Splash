@@ -1,21 +1,27 @@
 <template>
   <div class="form">
-    <form>
+    <form method="post">
       <fieldset>
-        <legend>Customer Input</legend>
+        <legend>Swimming Pool Input</legend>
+        Owner Name:<br>
+        <input type="text" name="owner"><br>
         Name:<br>
         <input type="text" name="name"><br>
         Width:<br>
-        <input type="number" name="width"><br>
+        <input type="text" name="width"><br>
         Length:<br>
-        <input type="number" name="length"><br>
+        <input type="text" name="length"><br>
         Depth:<br>
-        <input type="number" name="depth"><br>
+        <input type="text" name="depth"><br>
         Cost:<br>
         <input type="number" name="cost"><br>
         Profit:<br>
-        <input type="number" name="msrp"><br><br>
-        <input type="submit" value="Submit">
+        <input type="number" name="msrp"><br>
+        <br>
+        Image:<br>
+        <input type="number" name="image"><br><br>
+        <h5 class="msrp">Final Price:</h5>
+        <input type="submit" value="Add" v-bind="pools">
       </fieldset>
     </form>
 
@@ -25,9 +31,10 @@
 </template>
 
 <script>
-  export default {
-    name: 'PoolAdd',
-  }
+
+    export default {
+      name: 'PoolAdd',
+    }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
