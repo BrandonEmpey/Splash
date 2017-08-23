@@ -11,7 +11,7 @@ const users = require('./routes/users');
 const pools = require('./routes/pools');
 const customerLogin = require('./routes/customerLogin');
 const cors = require('cors');
-const history = require('connect-history-api-fallback')
+const history = require('connect-history-api-fallback');
 
 const app = express();
 app.use(cors({
@@ -21,7 +21,7 @@ const db = mongoose.connect(process.env.MONGODB_URI, {useMongoClient: true});
 
 const Customer = require('./models/CustomerModel');
 const Pool = require('./models/PoolModel');
-const Prospect = require('./models/prospectModel');
+const Prospect = require('./models/ProspectModel');
 const Spa = require('./models/SpaModel');
 
 // const poolModel = mongoose.model('Pool', poolSchema);
