@@ -1,6 +1,6 @@
 <template>
   <v-layout>
-    <v-flex xs12 sm12 >
+    <v-flex xs12 sm12>
       <v-card>
         <v-card-actions>
           <v-select label="Size" :items="items" v-model="size"></v-select>
@@ -15,7 +15,8 @@
             >
               <v-card flat tile>
                 <v-card-media
-                  :src="require('../assets/PleasureIsland.jpg')" height="45vh"
+                  v-if="pools.length > 0"
+                  :src="pools[0].image" height="45vh"
                 >
                 </v-card-media>
               </v-card>
@@ -28,28 +29,45 @@
 </template>
 
 <script>
+  import axios from 'axios';
   export default {
     name: 'Portfolio',
     data: () => ({
       size: 'sm',
       items: [
-        { text: 'Extra small (1px)', value: 'xs' },
-        { text: 'Small (4px)', value: 'sm' },
-        { text: 'Medium (8px)', value: 'md' },
-        { text: 'Large (16px)', value: 'lg' },
-        { text: 'Extra large (24px)', value: 'xl' }
-      ]
+        {text: 'Extra small (1px)', value: 'xs'},
+        {text: 'Small (4px)', value: 'sm'},
+        {text: 'Medium (8px)', value: 'md'},
+        {text: 'Large (16px)', value: 'lg'},
+        {text: 'Extra large (24px)', value: 'xl'}
+      ],
+      pools: [],
     }),
     props: {
       raised: true,
       hover: true
+    },
+    created ()
+    {
+      const server = axios.create({
+        baseURL: process.env.NODE_ENV === "production" ? '/api' : "http://localhost:3000/api"
+      });
+      server.get('/pools').then(response =>
+      {
+        return response.data
+      })
+        .then(pools =>
+        {
+          this.pools = pools
+        })
     }
   }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-  v-card-media{
+  v-card-media
+  {
     border-radius: 30px;
   }
 

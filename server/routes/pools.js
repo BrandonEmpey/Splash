@@ -12,10 +12,7 @@ const Pool = require('../models/poolModel');
 // });
 
 
-function pool ()
-{
-	
-}
+
 	poolRouter.route('/')
 		.post(function (req, res)
 		{
@@ -33,7 +30,6 @@ function pool ()
 
 			Pool.find().then(pools =>
 			{
-				console.log(pools);
 				res.json(pools);
 			});
 		});

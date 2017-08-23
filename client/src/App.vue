@@ -26,11 +26,10 @@
 </template>
 
 <script>
-  import VCardMedia from "vuetify/src/components/cards/VCardMedia";
   import Login from "./components/Login.vue";
 
   export default {
-    components: {VCardMedia, Login},
+    components: { Login},
     data () {
       return {
         items: [

@@ -7,13 +7,17 @@ const bodyParser = require('body-parser');
 const stylus = require('stylus');
 const mongoose = require('mongoose');
 const env = require('dotenv').config();
-const index = require('./routes/index');
 const users = require('./routes/users');
 const pools = require('./routes/pools');
 const customerLogin = require('./routes/customerLogin');
+const cors = require('cors');
+const history = require('connect-history-api-fallback')
 
 const app = express();
-const db = mongoose.connect('mongodb://localhost/Tropical');
+app.use(cors({
+    origin: 'http://localhost:8080'
+}));
+const db = mongoose.connect(process.env.MONGODB_URI, {useMongoClient: true});
 
 const Customer = require('./models/customerModel');
 const Pool = require('./models/poolModel');
@@ -42,13 +46,11 @@ app.use(cookieParser());
 app.use(stylus.middleware(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', index);
 app.use('/users', users);
 app.use('/api/pools', poolRouter);
 app.use('/api/spas', spaRouter);
 app.use('/api/customers', customerRouter);
 app.use('/api/prospects', prospectRouter);
-
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -67,5 +69,9 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+const clientRoot = path.join(__dirname, '../client/dist');
+app.use('/', express.static(clientRoot));
+app.use(history('index.html', { root: clientRoot }));
 
 module.exports = app;

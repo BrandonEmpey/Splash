@@ -24,7 +24,7 @@
 
 <script>
 
-  import VCardMedia from "vuetify/src/components/cards/VCardMedia";
+
 
   export default {
     name: 'MandalayBay',
