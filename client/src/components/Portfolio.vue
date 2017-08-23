@@ -11,19 +11,19 @@
             <v-flex
               xs4
               v-for="n in 9"
-              :key="n"
-            >
+              :key="n">
               <v-card flat tile>
                 <v-card-media
                   v-if="pools.length > 0"
-                  :src="pools[0].image" height="45vh"
-                >
+                  :src="pools[0].image" height="45vh">
                 </v-card-media>
               </v-card>
             </v-flex>
           </v-layout>
         </v-container>
       </v-card>
+
+
     </v-flex>
   </v-layout>
 </template>
