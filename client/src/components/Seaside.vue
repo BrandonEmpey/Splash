@@ -8,6 +8,7 @@
         </v-card-media>
       </v-card>
     </v-flex>
+    <h2>$24,000</h2>
   </v-layout>
 </template>
 

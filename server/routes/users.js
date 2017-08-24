@@ -1,9 +1,29 @@
 const express = require('express');
 const router = express.Router();
+const bodyParser = require('body-parser');
 
-/* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
-});
+const userRouter = express.Router();
 
-module.exports = router;
+userRouter.route('/users')
+	.post(function (req, res)
+	{
+		const user = new User(req.body);
+		user.save();
+	})
+	.get(function (req, res){
+		let query = {};
+
+		if(req.query.name){
+			query.name = req.query.name;
+		}
+		User.find(query, function(err, customers){
+			if (err)
+				res.status(500).send(err);
+			else
+				res.json(customers);
+		});
+		return userRouter;
+	});
+
+
+module.exports = userRouter;

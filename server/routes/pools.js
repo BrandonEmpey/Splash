@@ -5,38 +5,27 @@ const bodyParser = require('body-parser');
 const poolRouter = express.Router();
 const Pool = require('../models/PoolModel');
 
+poolRouter.route('/')
+	.post(function (req, res)
+	{
+		const pool = new Pool(req.body);
+		pool.save();
+	})
+	.get(function (req, res)
+	{
+		let query = {};
 
-
-// router.get('/', function(req, res) {
-// 	res.json({ message: 'hooray! welcome to our api!' });
-// });
-
-
-
-	poolRouter.route('/')
-		.post(function (req, res)
+		if (req.query.name)
 		{
-			const pool = new Pool(req.body);
-			pool.save();
-		})
-		.get(function (req, res)
+			query.name = req.query.name;
+		}
+
+		Pool.find().then(pools =>
 		{
-			let query = {};
-
-			if (req.query.name)
-			{
-				query.name = req.query.name;
-			}
-
-			Pool.find().then(pools =>
-			{
-				res.json(pools);
-			});
+			res.json(pools);
 		});
-
+	});
 
 module.exports = poolRouter;
-
-
 
 
